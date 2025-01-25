@@ -33,6 +33,8 @@ module Padrino
       include SafeBufferEnhancer
     end
 
+    Tilt::ErubisTemplate = Tilt::ErubiTemplate
+
     ##
     # Modded ErubisTemplate that doesn't insist in an String as output
     # buffer.
@@ -58,6 +60,7 @@ module Padrino
     end
   end
 end
+
 
 Tilt.prefer(Padrino::Rendering::ErubisTemplate, :erb)
 
